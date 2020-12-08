@@ -23,3 +23,10 @@ def create_songs():
     song = models.Song.create(**payload)
     song_dict = model_to_dict(song)
     return jsonify(data=song_dict, status={"code": 201, "message": "Success"})
+
+@song.route('/<id>', methods=["GET"])
+def get_one_song(id):
+    print(id, 'reserved word?')
+    song = models.Song.get_by_id(id)
+    print(song.__dict__)
+    return jsonify(data=model_to_dict(song), status={"code": 200, "message": "Success"})
