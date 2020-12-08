@@ -6,7 +6,6 @@ from playhouse.shortcuts import model_to_dict
 # second argument is it's import_name
 song = Blueprint('songs', 'song')
 
-
 @song.route('/', methods=["GET"])
 def get_all_songs():
     try:

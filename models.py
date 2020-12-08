@@ -1,4 +1,4 @@
-from peewee import * # import * means import everything from peewee
+from peewee import *
 import datetime
 
 # Connect to a Postgres database.
